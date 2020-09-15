@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,6 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
+  font-family: Pacifico, sans-serif;
 
 }
 
@@ -51,6 +52,7 @@ video {
   z-index: 2;
   display: flex;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
 
 }
 
@@ -84,6 +86,8 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
+  font-family: Pacifico, sans-serif;
+
 
 }
 
@@ -101,6 +105,9 @@ button {
   outline: none;
 }
 
+button:hover{
+  filter: brightness(110%);
+}
 
 
 /* Countdown */
@@ -109,7 +116,7 @@ ul {
 }
 
 li {
-
+  display: inline-block;
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -128,6 +135,29 @@ li span {
   top: 60px;
 }
 
+.complete-title{
+  animation: complete 4s infinite;
+}
+
+@keyframes complete{
+  0%{
+    color: rgb(240, 11, 11);
+  }
+  25%{
+    color: rgb(248, 211, 0);
+  }
+  50%{
+    color: rgb(0, 248, 95);
+    transform: scale(1.5);
+  }
+  75%{
+    color: rgb(0, 198, 248);
+  }
+  100%{
+    color: rgb(157, 0, 248);
+
+  }
+}
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
@@ -143,7 +173,8 @@ li span {
   }
 
   .container {
-
+    min-width: unset;
+    width: 95vw;
     min-height: 245px;
     padding: 20px;
     margin: 10px;
